@@ -18,8 +18,11 @@ ADMIN_CPFS = ["10808560646"]
 
 # verificar troca de senha
 if st.session_state.get("trocar_senha") == 1:
+    st.session_state.page = "trocar_senha"
+
+if st.session_state.get("page") == "trocar_senha":
     tela_trocar_senha()
-    st.stop()
+else:
 
 st.title("🚗 Controle Motorista")
 
